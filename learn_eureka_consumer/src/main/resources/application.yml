@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: eureka-consumer
+server:
+  port: 8820
+  servlet:
+    context-path: /eureka/consumer
+
+
+eureka:
+  instance:
+    instance-id: eureka-consumer:8820 #注册中心显示名称
+    prefer-ip-address: true #访问路径显示ip地址
+  client:
+    # 作为客户端注册到注册中心，作为注册中心的时候需要设置为false
+    fetch-registry: true
+    register-with-eureka: true
+    # 第一个eureka是项目名称（servlet.context-path）,第二个eureka是项目中的服务注册路径
+    service-url:
+      defaultZone: http://localhost:8710/eureka/eureka/ #,http://peer2:8720/eureka/,http://peer3:8730/eureka/eureka/
+feign:
+  compression:
+    request:
+      mime-types: application/json

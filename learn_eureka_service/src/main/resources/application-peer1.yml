@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-eureka
+server:
+  port: 8710
+  servlet:
+    context-path: /eureka
+
+eureka:
+  instance:
+    hostname: peer1
+
+  # 指向另一个节点
+  client:
+    service-url:
+      defaultZone: http://peer1:8720/eureka/,http://peer3:8730/eureka/
+
+
+    # 表示是否将自己注册到Eureka Server，默认为true。
+    register-with-eureka: false
+
+    # 表示是否从Eureka Server获取注册信息，默认为true
+    fetch-registry: false
