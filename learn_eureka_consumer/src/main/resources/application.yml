@@ -22,3 +22,6 @@ feign:
   compression:
     request:
       mime-types: application/json
+  hystrix:
+    # 熔断器，避免服务不可用还产生许多等待请求，避免发送大量无效请求影响系统吞吐量
+    enabled: true

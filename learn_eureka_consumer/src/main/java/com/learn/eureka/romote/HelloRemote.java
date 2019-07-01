@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @date 2019-07-01 15:54
  */
 // FeignClient 的服务提供者名称需要和 spring.application.name 一直
-@FeignClient(name = "eureka-provider", path = "/eureka/provider")
+@FeignClient(name = "eureka-provider", path = "/eureka/provider", fallback = HelloRemoteHystrix.class)
 public interface HelloRemote {
 
     @RequestMapping("/hello")
