@@ -22,3 +22,7 @@ eureka:
 
       # 表示是否从Eureka Server获取注册信息，默认为true
     fetch-registry: false
+
+  server:
+    enable-self-preservation: false #关闭保护中心，以用来确保eureka可以剔除不可用的注册服务
+    eviction-interval-timer-in-ms: 5000 #（代表是5秒，单位是毫秒,清理失效服务的间隔 ）
