@@ -26,3 +26,20 @@ eureka:
     enable-self-preservation: false #关闭保护中心，以用来确保eureka可以剔除不可用的注册服务
     eviction-interval-timer-in-ms: 5000 #（代表是5秒，单位是毫秒,清理失效服务的间隔 ）
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    git:
+      enabled: true
+      mode: full
+
+info:
+  app:
+    name: eureka-server
+    version: @project.version@
+    encoding: @project.build.sourceEncoding@
+    java:
+      version: @java.version@
