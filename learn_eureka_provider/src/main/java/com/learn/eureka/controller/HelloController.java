@@ -29,4 +29,10 @@ public class HelloController {
         stringBuffer.append(param.toString());
         return stringBuffer.toString();
     }
+    
+    
+    @RequestMapping("/foo")
+    public String foo(String foo) {
+        return "this foo is  :" + foo;
+    }
 }
