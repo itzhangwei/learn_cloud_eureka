@@ -3,14 +3,18 @@ spring:
     name: eureka-provider
 server:
   port: 8810
-  servlet:
-    context-path: /eureka/provider
+#  servlet:
+#    context-path: /eureka/provider
 
 
 eureka:
   instance:
-    instance-id: eureka-provider:8810 #注册中心显示名称
+    instance-id: eureka-provider:${server.port} #注册中心显示名称
     prefer-ip-address: true #访问路径显示ip地址
+
+    lease-expiration-duration-in-seconds: 20 # 告诉eureka注册中心如果20s内我没有给你心跳反应，代表我'死'了，从注册中心剔除我
+    lease-renewal-interval-in-seconds: 10 # 每隔10s向注册中心发送一次心跳，证明自己还活着
+
   client:
     # 作为客户端注册到注册中心，作为注册中心的时候需要设置为false
     fetch-registry: true
@@ -18,4 +22,3 @@ eureka:
     # 第一个eureka是项目名称（servlet.context-path）,第二个eureka是项目中的服务注册路径
     service-url:
       defaultZone: http://localhost:8710/eureka/eureka/ #,http://peer2:8720/eureka/,http://peer3:8730/eureka/eureka/
-
