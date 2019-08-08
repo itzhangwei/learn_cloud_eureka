@@ -12,8 +12,8 @@ eureka:
 
   # 指向另一个节点
   client:
-    service-url:
-      defaultZone: http://peer1:8720/eureka/,http://peer3:8730/eureka/
+#    service-url:
+#      defaultZone: http://peer1:8720/eureka/ #,http://peer3:8730/eureka/
 
 
     # 表示是否将自己注册到Eureka Server，默认为true。
