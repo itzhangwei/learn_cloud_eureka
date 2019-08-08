@@ -1,6 +1,7 @@
 package com.learn.eureka.romote;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,6 +17,7 @@ import java.util.HashMap;
  */
 // FeignClient 的服务提供者名称需要和 spring.application.name 一直
 @FeignClient(name = "eureka-provider", path = "/eureka/provider", fallback = HelloRemoteHystrix.class)
+@Component
 public interface HelloRemote {
 
     @RequestMapping("/hello")
