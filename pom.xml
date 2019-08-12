@@ -307,7 +307,7 @@
         <pluginRepository>
             <id>public</id>
             <name>pluginRepo</name>
-            <url>http://106.13.162.44:6081/repository/imx/</url>
+            <url>http://106.13.162.44:6081/repository/maven-public/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
