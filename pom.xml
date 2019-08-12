@@ -169,22 +169,6 @@
                 </exclusions>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-xml</artifactId>
-                <version>${jackson-version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>stax2-api</artifactId>
-                        <groupId>org.codehaus.woodstox</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>jackson-module-jaxb-annotations</artifactId>
-                        <groupId>com.fasterxml.jackson.module</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.netflix.eureka/eureka-client -->
             <dependency>
