@@ -291,7 +291,7 @@
 
     <repositories>
         <repository>
-            <id>maven-central</id>
+            <id>imx</id>
             <name>maven-central</name>
             <url>http://106.13.162.44:6081/repository/imx/</url>
             <snapshots>
@@ -302,4 +302,12 @@
             </releases>
         </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>pluginRepo</name>
+            <url>http://106.13.162.44:6081/repository/imx/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
