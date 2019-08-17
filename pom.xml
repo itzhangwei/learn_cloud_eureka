@@ -25,6 +25,7 @@
         <docker.plugin.version>1.0.0</docker.plugin.version>
         <docker.image.prefix>learn</docker.image.prefix>
         <maven.resources.plugin>3.1.0</maven.resources.plugin>
+        <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
     </properties>
 
     <dependencyManagement>
@@ -278,11 +279,13 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+                <version>${maven.compiler.plugin}</version>
             </plugin>
 
             <plugin>
