@@ -25,7 +25,7 @@
         <docker.plugin.version>1.0.0</docker.plugin.version>
         <docker.image.prefix>learn</docker.image.prefix>
         <maven.resources.plugin>3.1.0</maven.resources.plugin>
-        <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
+        <maven.compiler.plugin>3.6.1</maven.compiler.plugin>
     </properties>
 
     <dependencyManagement>
