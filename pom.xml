@@ -23,6 +23,7 @@
         <jackson-version>2.9.9</jackson-version>
         <snakeyaml-version>1.23</snakeyaml-version>
         <docker.plugin.version>1.0.0</docker.plugin.version>
+        <docker.image.prefix>learn</docker.image.prefix>
     </properties>
 
     <dependencyManagement>
@@ -300,6 +301,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                </configuration>
             </plugin>
         </plugins>
     </build>
