@@ -24,6 +24,7 @@
         <snakeyaml-version>1.23</snakeyaml-version>
         <docker.plugin.version>1.0.0</docker.plugin.version>
         <docker.image.prefix>learn</docker.image.prefix>
+        <maven.resources.plugin>3.1.0</maven.resources.plugin>
     </properties>
 
     <dependencyManagement>
@@ -287,6 +288,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.plugin}</version>
             </plugin>
 
             <plugin>
