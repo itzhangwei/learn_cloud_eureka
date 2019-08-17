@@ -1,6 +1,6 @@
 # Dockerfile example
-FROM centos
-#LABEL maintainer="it_zhangwei@163.com"
+FROM openjdk:8-jdk-alpine
+LABEL maintainer="it_zhangwei@163.com"
 
 VOLUME /tmp
 
