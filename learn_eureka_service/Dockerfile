@@ -1,5 +1,5 @@
 # Dockerfile example
-FROM openjdk:8-jdk-alpine
+FROM java:8
 LABEL maintainer="it_zhangwei@163.com"
 
 VOLUME /tmp
