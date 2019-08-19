@@ -87,7 +87,6 @@
                         <imageTag>latest</imageTag>
                     </imageTags>
                     <dockerDirectory>${project.basedir}</dockerDirectory>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
