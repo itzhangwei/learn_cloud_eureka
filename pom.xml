@@ -90,10 +90,6 @@
                         <artifactId>jackson-core</artifactId>
                     </exclusion>
                     <exclusion>
-                        <artifactId>jackson-dataformat-xml</artifactId>
-                        <groupId>com.fasterxml.jackson.dataformat</groupId>
-                    </exclusion>
-                    <exclusion>
                         <artifactId>guava</artifactId>
                         <groupId>com.google.guava</groupId>
                     </exclusion>
