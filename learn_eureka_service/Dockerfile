@@ -16,4 +16,4 @@ ADD ./target/*.jar /learn-eureka-service.jar
 # 开发端口，读区 ENV中配置的变量
 EXPOSE $PORT_TO_EXPOSE
 
-#ENTRYPOINT ["java","-Xms1g","-Xmx2g","-Djava.security.egd=file:/dev/./urandom","-jar","/eureka-service.jar"]
+ENTRYPOINT ["java","-Xms1g","-Xmx2g","-Djava.security.egd=file:/dev/./urandom","-jar","/eureka-service.jar"]
