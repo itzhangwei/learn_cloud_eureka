@@ -7,7 +7,7 @@ VOLUME /tmp
 # 端口环境定义
 ENV PORT_TO_EXPOSE=8710
 
-ADD ./target/*.jar /eureka-service.jar
+ADD ./target/*.jar /learn-eureka-service.jar
 
 
 #RUN bash -c 'touch /eureka-service.jar'
