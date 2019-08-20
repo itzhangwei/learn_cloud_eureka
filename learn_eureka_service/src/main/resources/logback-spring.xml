@@ -38,7 +38,7 @@
     <root level="info">
         <appender-ref ref="console" />
 <!--        日志输出文件 -->
-<!--        <appender-ref ref="fileLog" />-->
+        <appender-ref ref="fileLog" />
     </root>
 
     <logger name="com.learn.dao" level="info" />
