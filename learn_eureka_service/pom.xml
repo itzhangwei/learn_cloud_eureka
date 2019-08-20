@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>learn_uereka_service</artifactId>
+    <artifactId>learn_eureka_service</artifactId>
 
     <dependencies>
 
@@ -82,10 +82,10 @@
                 </executions>
                 <configuration>
                     <imageName>${project.artifactId}</imageName>
-                    <imageTags>
-                        <imageTag>${project.version}</imageTag>
-                        <imageTag>latest</imageTag>
-                    </imageTags>
+<!--                    <imageTags>-->
+<!--                        <imageTag>${project.version}</imageTag>-->
+<!--                        <imageTag>latest</imageTag>-->
+<!--                    </imageTags>-->
                     <dockerDirectory>${project.basedir}</dockerDirectory>
                     <resources>
                         <resource>
