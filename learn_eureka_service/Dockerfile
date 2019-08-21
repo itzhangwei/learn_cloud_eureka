@@ -11,7 +11,7 @@ ENV PORT_TO_EXPOSE=8710
 ADD ./target/*.jar /learn-eureka-service.jar
 
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
 
 
 
