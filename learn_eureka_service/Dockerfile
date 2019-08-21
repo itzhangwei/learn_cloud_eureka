@@ -1,5 +1,6 @@
-# Dockerfile example
-FROM openjdk:8-jdk-alpine
+# 从阿里云docker的registry中构建
+FROM registry.cn-shanghai.aliyuncs.com/qianjiu_docker/openjdk:8-jdk-alpine
+
 LABEL maintainer="it_zhangwei@163.com"
 
 VOLUME /tmp
