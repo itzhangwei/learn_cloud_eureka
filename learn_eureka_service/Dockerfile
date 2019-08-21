@@ -11,7 +11,8 @@ ENV PORT_TO_EXPOSE=8710
 ADD ./target/*.jar /learn-eureka-service.jar
 
 
-#RUN bash -c 'touch /eureka-service.jar'
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone
+
 
 
 # 开发端口，读区 ENV中配置的变量
