@@ -7,6 +7,8 @@
     <springProperty scope="context" name="name" source="spring.application.name"/>
 
     <property name="LOG_HOME" value="./logs" />
+
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
     <property name="CONSOLE_LOG_PATTERN_FILE" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %clr(${LOG_LEVEL_PATTERN:-%5p}) %logger{50}:%L - %msg%n"/>
 
 
@@ -24,9 +26,13 @@
 
     <!--输出到文件-->
     <appender name="fileLog"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter>
+            <level>error</level>
+        </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <FileNamePattern>${LOG_HOME}/${name}.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
             <maxFileSize>150MB</maxFileSize>
+            <!--日志文件保留天数-->
             <maxHistory>7</maxHistory>
             <totalSizeCap>1GB</totalSizeCap>
         </rollingPolicy>
