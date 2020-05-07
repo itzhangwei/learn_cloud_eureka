@@ -3,8 +3,8 @@ spring:
     name: spring-cloud-eureka
 server:
   port: 8710
-  servlet:
-    context-path: /eureka
+  #servlet:
+#    context-path: /eureka
 
 eureka:
   instance:
@@ -13,14 +13,14 @@ eureka:
   # 指向另一个节点
   client:
     service-url:
-      defaultZone: http://admin:admin-eureka@106.13.162.44:8110/ #,http://peer3:8730/eureka/
+      defaultZone: http://admin:admin-eureka@106.13.162.44:8110/eureka/ #,http://peer3:8730/eureka/
 
 
     # 表示是否将自己注册到Eureka Server，默认为true。
-    register-with-eureka: true
+    register-with-eureka: false
 
     # 表示是否从Eureka Server获取注册信息，默认为true
-    fetch-registry: true
+    fetch-registry: false
 
   server:
     enable-self-preservation: false #关闭保护中心，以用来确保eureka可以剔除不可用的注册服务
