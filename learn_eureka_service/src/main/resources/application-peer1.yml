@@ -17,10 +17,10 @@ eureka:
 
 
     # 表示是否将自己注册到Eureka Server，默认为true。
-    register-with-eureka: false
+    register-with-eureka: true
 
     # 表示是否从Eureka Server获取注册信息，默认为true
-    fetch-registry: false
+    fetch-registry: true
 
   server:
     enable-self-preservation: false #关闭保护中心，以用来确保eureka可以剔除不可用的注册服务
